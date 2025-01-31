@@ -2,7 +2,11 @@
 title: "Hello R"
 author: "Justin Perez"
 date: "Data 2401"
-output: html_document
+output: 
+  html_document: 
+    fig_width: 10
+    fig_height: 6
+    highlight: espresso
 ---
 
 MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT.
@@ -34,7 +38,6 @@ dino_data %>%
 
 ### Exercise 3
 
-
 ```{r plot-star}
 star_data <- datasaurus_dozen %>%
   filter(dataset == "star")
@@ -51,7 +54,6 @@ star_data %>%
 
 ### Exercise 4
 
-
 ```{r plot-circle}
 circle_data <- datasaurus_dozen %>%
   filter(dataset == "circle")
@@ -59,7 +61,9 @@ ggplot(data = circle_data, mapping = aes(x = x, y = y)) +
   geom_point()
 
 ```
+
 Correlation coefficient for circle dataset is larger than for dino dataset.
+
 ```{r cor-circle}
 circle_data %>%
   summarize(r = cor(x, y))
@@ -69,3 +73,17 @@ circle_data %>%
 ### Exercise 5
 
 (Add code and narrative as needed. To add R chunks either type out the backticks, curly braces, and the letter `r` or use the Insert chunk button above, with the green +C.)
+
+```{r }
+ggplot(datasaurus_dozen, aes(x=x, y=y, color=dataset))+
+  geom_point()+
+  facet_wrap(~ dataset, ncol=3)+
+  theme(legend.position="none")
+
+```
+
+```{r }
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(r=cor(x,y))
+```
