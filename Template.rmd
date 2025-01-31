@@ -5,7 +5,7 @@ date: "Data 2401"
 output: html_document
 ---
 
-MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT. 
+MAKE SURE YOU READ AND FOLLOW **ALL** INSTRUCTIONS ON THE INSTRUCTION DOCUMENT.
 
 ### Load packages
 
@@ -14,19 +14,11 @@ library(tidyverse)
 library(datasauRus)
 ```
 
-
 ### Exercise 1
 
-datasaurus_dozen rows: 1846
-datasaurus_dozen variables: 3
-datasaurus_dozen variable names:
-1.dataset
-2.x
-3.y
+datasaurus_dozen rows: 1846 datasaurus_dozen variables: 3 datasaurus_dozen variable names: 1.dataset 2.x 3.y
 
 ### Exercise 2
-
-(The answers for this Exercise are given for you below. But you should clean up some of the narrative so that it only includes what you want to turn in.)
 
 First let's plot the data in the dino dataset:
 
@@ -48,15 +40,13 @@ dino_data %>%
 
 (Add code and narrative as needed. Note that the R chunks are labeled with `plot-star` and `cor-star` to provide spaces to place the code for plotting and calculating the correlation coefficient. To finish, remember to clean up the narrative by removing these instructions.)
 
-
-
 ```{r plot-star}
 
 
 ```
 
 I'm some text, you should replace me with more meaningful text...
- 
+
 ```{r cor-star}
 
 
